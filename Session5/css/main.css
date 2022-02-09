@@ -1,0 +1,79 @@
+body {
+  /* background-color: green; */
+  /* background-image: url(../images/download.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 70px 100px;
+  height: 5000px; */
+}
+
+div {
+  /* background-color: #000;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 5px double red; */
+  /* border-width: 5px;
+  border-style: double;
+  border-color: red; */
+}
+
+/* margin 
+  - make spacing around elemet 
+  - can talk negative number
+  - don't effect into width and height 
+
+- padding
+
+  - make spacing in the elemet 
+  - can not talk negative number
+  -  effect into width and height 
+  
+  - border 
+  
+*/
+
+p {
+  /* color: green;
+  font-family: monospace, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  font-style: italic;
+
+  text-align: left;
+  text-transform: uppercase; */
+  /* word-spacing: 20px; */
+  /* letter-spacing: 5px;
+  line-height: 30px; */
+}
+
+/* div:hover {
+  background-color: green;
+} */
+
+/* Display: none | block | inline | inline-block */
+
+div {
+  height: 50px;
+  margin: 10px;
+  background-color: red;
+}
+
+span {
+  background-color: red;
+  width: 100px;
+  margin: 5px;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+}
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  list-style-position: inside;
+}
