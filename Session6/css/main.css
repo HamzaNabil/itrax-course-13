@@ -1,0 +1,113 @@
+.parent {
+  /* background-color: green; */
+}
+
+/* Nesting  div p {} */
+/* Grouping  div , p , span {} */
+
+/* Grouping with nesting  div p, .item span {}  */
+
+.item {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.one {
+  background-color: red;
+}
+
+.two {
+  background-color: black;
+}
+
+.three {
+  background-color: blue;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+.icon {
+    border-bottom: 1px solid red;
+}
+.h {
+    border-bottom: 0;
+}
+
+.posr {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    top: 100px;
+}
+
+body {
+    height: 2000px;
+}
+
+.posa {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    top:0 ;
+}
+
+.child {
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    position: relative;
+    margin: 0;
+}
+
+
+.home {
+    height: 200px;
+    background-color: yellow;
+    position: relative;
+}
+
+.content {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+div p {
+
+}
+
+p span {
+
+}
+
+p .test {
+
+}
+
+.all p {
+    color: red;
+}
+
+.hamada p {
+    color: yellow;
+}
