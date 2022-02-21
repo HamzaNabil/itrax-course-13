@@ -1,0 +1,165 @@
+.ele {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.ele1 {
+  background-color: red;
+  z-index: 30;
+}
+.ele2 {
+  background-color: yellow;
+  z-index: 20;
+}
+
+body {
+  height: 5000px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: aqua;
+  z-index: 100;
+}
+
+/* لما اشاور على الديف هو نفسه اللى يتاثر */
+/* .home:hover {
+  background-color: red;
+} */
+/* لما اشاور على الديف خلى اللينك هو اللى يتأثر  Pseudo-class*/
+.home:hover a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Pseudo Elemet بغير جزء من العنصر */
+
+/* p:first-letter {
+  color: red;
+  font-size: 20px;
+  text-transform: uppercase;
+} */
+
+/* Before - after */
+p:after {
+  content: " element";
+  color: red;
+}
+
+ul {
+  list-style: none;
+}
+/* 
+li:before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: red;
+  visibility: hidden;
+}
+
+li:after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  margin-left: 10px;
+  background-color: red;
+  visibility: hidden;
+}
+
+li:hover:before,
+li:hover:after {
+  visibility: visible;
+} */
+
+.one,
+.two {
+  width: 100px;
+  height: 100px;
+}
+
+.one {
+  background: #000;
+  visibility: hidden;
+}
+.two {
+  background: #080;
+}
+
+/* select class .name */
+/* select id #name */
+
+#go {
+  color: red;
+}
+
+.test {
+  color: green;
+}
+
+div span #hamada {
+}
+
+.test #ele div p span {
+}
+
+/* معادلة Specificity */
+
+/*   
+    id class element 
+    1  0     0       = 100
+    0  1     0       = 10
+ 
+    1  0     2       = 102
+
+    1  1     3      = 113
+*/
+
+.header .item {
+  display: inline-block;
+  background-color: #080;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  width: 150px;
+}
+
+.header .item:hover {
+  background-color: blue;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: aqua;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+
+.header .item:hover .dropdown {
+  display: block;
+}
+
+.gallery img {
+  width: 200px;
+  height: 100px;
+  border: 1px solid gray;
+  padding: 3px;
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.gallery img:hover {
+  opacity: 1;
+}
