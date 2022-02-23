@@ -1,0 +1,209 @@
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  overflow-y: auto;
+}
+
+.dis,
+.vis,
+.opc {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  float: left;
+  padding: 10px;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.dis div {
+  height: 50px;
+  background-color: blue;
+  cursor: pointer;
+  margin: 2em;
+}
+.opc div {
+  height: 50px;
+  background-color: yellow;
+  cursor: pointer;
+  opacity: 0;
+}
+.vis div {
+  height: 50px;
+  background-color: green;
+  cursor: pointer;
+  visibility: hidden;
+}
+.clearfix {
+  clear: both;
+}
+
+/* Units: rem em vh vw px */
+
+/* Root Element */
+html {
+  font-size: 16px;
+}
+
+.pr {
+  height: 500px;
+  background: #000;
+}
+
+.ele {
+  width: 50vw; /* viewport width */
+  height: 10vh; /* viewport height */
+  background-color: red;
+}
+
+body {
+  margin: 0;
+}
+
+input[type="submit"] {
+  border: 1px solid red;
+}
+
+input[type="text"] {
+}
+
+[type="text"] {
+  border: 1px solid blue;
+}
+
+/*
+    > Direct Child
+    + Next Sibling selector
+    ~ general Sibling Selector
+*/
+
+.data > span {
+  color: red;
+}
+
+/* div ~ h3 {
+  color: yellow;
+}
+
+div {
+  color: red !important;
+}
+
+div {
+  color: blue !important;
+} */
+
+/* id class element */
+
+/*  section > section + div > p ~ h3 > span + span  */
+/* <section>
+    <section>
+    </section>
+    <div>
+        <p>
+        </p>
+        <h3>
+            <span></span>
+            <span></span>
+        </h3>
+
+    </div>
+</section> */
+
+.crafting {
+  width: 70%;
+  margin: 50px auto;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 60%;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.image-wrapper:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  background-color: #0082f1;
+  z-index: -1;
+}
+
+.image-wrapper:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  background-color: #0082f1;
+  z-index: -1;
+}
+
+.info {
+  background-color: #fff;
+  color: #000;
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  width: 40%;
+  padding: 50px;
+  box-shadow: 1px 1px 10px #888;
+}
+
+.info-title {
+}
+
+.info-desc {
+}
+
+.progress-bar {
+  width: 350px;
+  height: 5px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.progress-inner {
+  height: 100%;
+  width: 90%;
+  background-color: #0082f1;
+  position: relative;
+}
+
+.inner2 {
+  width: 70%;
+}
+
+.tooltip {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  display: inline-block;
+  padding: 2px;
+  top: -23px;
+}
+
+.tooltip:after {
+  content: "";
+  display: block;
+  left: 8px;
+  border-top: 5px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+}
