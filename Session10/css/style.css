@@ -1,0 +1,130 @@
+body {
+  height: 100vh;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  position: relative;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  /* transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 5s; */
+
+  /* transition: width 2s ease-in-out 5s; */
+
+  /* animation-name: hamada 
+    animation-duration: 1s;
+    animation-itration-count: 2
+  */
+  animation: changePs 1s infinite;
+}
+
+.box:hover {
+}
+
+@keyframes changePs {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  75% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.parent {
+  background-color: gray;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent .item {
+  width: 100px;
+  height: 100px;
+  /* float: left; */
+}
+/* 
+.clearfix {
+  clear: both;
+} */
+
+.parent .item:first-of-type {
+  background-color: red;
+}
+
+.parent .item:nth-child(2) {
+  background-color: blue;
+}
+
+.parent .item:last-child {
+  background-color: yellow;
+}
+
+.parent2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.parent2 img {
+  width: 48%;
+}
+
+header {
+  display: flex;
+}
+
+header h2 {
+  background-color: red;
+  color: #fff;
+  flex: 5;
+}
+header ul {
+  background-color: blue;
+  color: #fff;
+  flex: 5;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+html {
+  --color: blue;
+  --size: 12px;
+}
+.data {
+  width: 30%;
+  height: 300px;
+  background-color: var(--color);
+}
+/* ========================================================== */
+
+p {
+  color: var(--color);
+}
+
+span {
+  background-color: var(--color);
+}
+
+.item {
+  border: 1px solid var(--color);
+}

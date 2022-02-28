@@ -1,0 +1,27 @@
+/* Media Query */
+
+/* 
+   xs:  0 => 575
+   sm: 576 => 768
+   md: 769 => 991
+   lg: 991 => 00000
+*/
+
+@media (max-width: 575px) {
+  .data {
+    background-color: green;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .data {
+    background-color: yellow;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 991px) {
+}
