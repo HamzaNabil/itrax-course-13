@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* 7DBC26 */
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.customer {
+  background-color: #fff;
+  background-image: url(../images/team-bg.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.customer:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.height {
+  height: 50px;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.customer-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer-box {
+  width: 30%;
+  position: relative;
+  height: 400px;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.customer-box-image {
+  width: 100%;
+}
+
+.customer-box-info {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -50px;
+  width: 90%;
+  transition: bottom 0.5s;
+}
+
+.customer-info-desc {
+  color: #7dbc26;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.customer-box-info ul {
+  display: flex;
+  justify-content: center;
+}
+.customer-box-info ul li {
+  margin: 0 5px;
+}
+.customer-box-info ul li i {
+  width: 30px;
+  height: 30px;
+  background-color: #7dbc26;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.customer-box:hover .customer-box-info {
+  bottom: 10px;
+}
