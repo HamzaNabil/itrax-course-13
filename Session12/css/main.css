@@ -1,0 +1,41 @@
+
+
+/* px em rem vh vw % */
+html {
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+span {
+  margin-top: 1rem;
+}
+
+div {
+  /* 50vh */
+}
+
+body {
+  /* height: 100vh; // viewport height  */
+}
+
+div {
+  height: 100%;
+}
+
+/* Before After */
+
+ul {
+  list-style-type: none;
+}
+
+li:before {
+  content: "";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left:5px solid black;
+}
