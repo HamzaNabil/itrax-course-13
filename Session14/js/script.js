@@ -157,7 +157,20 @@ btn.onclick = addUsername;
 // function
 function addUsername() {
   pElm.style.display = "none";
-  if (userInput.value != "" && ageInput.value != "") {
+
+  if (userInput.value.length > 10) {
+    alert("user must be 10 characters");
+    return;
+  }
+
+  if (ageInput.value > 100) {
+    alert("user age must be less than 100");
+    return;
+  }
+  if (ageInput.value.includes("-")) {
+    alert("number must be positive");
+  }
+  if (userInput.value.trim() != "" && ageInput.value.trim() != "") {
     ulList.innerHTML +=
       "<li>" + userInput.value + ", " + ageInput.value + "</li>";
 
