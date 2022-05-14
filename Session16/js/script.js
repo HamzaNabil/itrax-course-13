@@ -1,67 +1,118 @@
-// Array with Objects
+// var myImg = document.querySelector("img");
+// var imgs = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg"];
 
-var persons = [
-  {
-    id: 1,
-    name: "Ahmed",
-    age: 20,
-    weight: "80kg",
-    firends: ["tarek", "omar", "mahmoud"],
-    work: {
-      name: "City Starts",
-      places: ["wef", "wefwe", "reger"],
-    },
-  },
-  {
-    id: 2,
-    name: "Yasser",
-    age: 25,
-    weight: "60kg",
-    firends: ["ahmed", "hossam", "fady"],
-  },
-  {
-    id: 3,
-    name: "Mohamed",
-    age: 23,
-    weight: "35kg",
-    firends: ["ibrahim", "Tawfiq", "ahmed"],
-  },
+// // SetTimeout
+// var i = 0;
+// function slidehshow() {
+//   myImg.setAttribute("src", imgs[i]); //
+//   i++; // 1
+
+//   if (i == imgs.length) {
+//     i = 0;
+//   }
+
+//   setTimeout(function () {
+//     slidehshow();
+//   }, 2000);
+// }
+
+// slidehshow();
+
+// Palindrome
+
+// function palindrome(str) {
+//   // Convert str to LowerCase and trim
+//   var newStr = str.toLowerCase().trim(); // RaR => rar
+//   // convert string to array
+//   var word = newStr.split(""); // ["r","a","r"]
+//   // reverse array
+//   var reversedWord = word.reverse(); // ["r","a","r"] // rar
+//   // convert array to str
+//   var txt = reversedWord.join(""); //rar
+
+//   // Abbrevation
+//   //   var newStr = str.toLowerCase().trim();
+//   //   var txt = newStr.split("").reverse().join("");
+
+//   if (txt == newStr) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+// // Rar = rar
+// // rar  == rar
+// // radar == radar
+// // Hello != olleH
+// // test != Tset
+// palindrome("rar "); // true
+// palindrome(" Rar"); // true
+// palindrome("radar"); // true
+// palindrome("Hello"); // false
+// palindrome("test"); // false
+
+// Array of User objects
+var users = [
+  { id: 1, name: "Ahmed", age: 23 },
+  { id: 2, name: "Mohamed", age: 25 },
+  { id: 3, name: "Yasser", age: 27 },
+  { id: 4, name: "Tarek", age: 29 },
+  { id: 5, name: "Ahmed", age: 29 },
+  { id: 6, name: "Tarek Ahmed", age: 29 },
 ];
 
-// Find index
+var nameInput = document.querySelector("#username");
+var ageInput = document.querySelector("#userage");
+var btn = document.querySelector("button");
+var list = document.querySelector("#usersList");
+var searchUserInput = document.querySelector("#searchUser");
+var searchBtn = document.querySelector("#searchBtn");
 
-// var i = persons.findIndex(function (person) {
-//   return person.id == 2;
-// });
+btn.onclick = addUser;
+searchBtn.onclick = searchUser;
 
-// console.log(i);
+function addUser() {
+  var nameValue = nameInput.value;
+  var ageValue = +ageInput.value; // "30" => 30
+  // id = Math.floor(Math.random() * 1000000)
+  users.push({ id: users.length + 1, name: nameValue, age: ageValue });
 
-// persons.splice(i, 1);
+  listUsers(users);
+}
+// Filter
+// Find
+// FindIndex
+function searchUser() {
+  var searchValue = searchUserInput.value; // ahmed
+  var filteredUsers = [];
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].name.toLowerCase().includes(searchValue.toLowerCase())) {
+      filteredUsers.push(users[i]);
+    }
+  }
+  listUsers(filteredUsers);
+  // users
+}
 
-// console.log(persons);
+function listUsers(items) {
+  list.innerHTML = "";
+  for (var i = 0; i < items.length; i++) {
+    list.innerHTML +=
+      "<li>" +
+      items[i].name +
+      " " +
+      items[i].age +
+      " <button onclick='deleteUser(" +
+      items[i].id +
+      ")' > Delete </button> </li>";
+  }
+}
+// ``
+//  "<li class="kefjkefj( '"+ afefef+ " ' )'>"
 
-// String Methods
+listUsers(users);
 
-var str1 = "Hello World "; // array of charaters
-var str2 = "Test";
-
-var firstName = "Hamza";
-var lstName = " Nabil";
-
-// Search
-// MoHamed => mohamed
-// Mohamed   mohamed
-// console.log(str.toLowerCase());
-
-// console.log(firstName.concat(lstName));
-
-var s = "Hello"; // Hello
-var a = s.split(""); // ["H", "e", "l", "l", "o"]
-var s1 = a.reverse(); // ["o", "l", "l", "e", "H"]
-// olleh
-console.log(s1.join(""));
-
-// Convert String to Array
-// split
-// Convet Array To String
-// join
+function deleteUser(id) {
+  users.splice(id - 1, 1);
+  listUsers(users);
+}

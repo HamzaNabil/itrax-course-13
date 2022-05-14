@@ -1,13 +1,19 @@
-# JavaScript Part 4
+# JavaScript Part 5
 
 # Content :
 
-- Array
+Examples
 
-- Object
+- Slideshow
 
-- Iterate over Object [ For in ]
+- Palindrome
 
-- Array Methods [ push - pop - shift - unshift, splice ]
+- User App:
 
-- String Methods [ slice , trim, concat, toUpperCase, toLowerCase]
+  - Listing
+
+  - Searching
+
+  - Delete
+
+  - View [ View clicked User in modal ]
